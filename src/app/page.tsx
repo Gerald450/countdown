@@ -30,17 +30,12 @@ export default function Countdown() {
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
+
 
   return (
     <div className="grid items-center justify-items-center min-h-screen p-8 gap-10 sm:p-20 bg-pink-50 text-gray-800">
       <h1 className="text-4xl sm:text-6xl font-bold text-center text-rose-600">
-        Counting down to when I see you ❤️
+        Next stop: You & Me 🫶🏾
       </h1>
       <Card className="bg-white/80 shadow-xl backdrop-blur-md border-pink-200">
         <CardContent className="flex flex-col items-center p-10 text-center">
