@@ -62,6 +62,11 @@ export default function Countdown() {
           /> */}
         </CardContent>
       </Card>
+     <footer className="text-md sm:text-lg text-gray-600 italic">
+      Created By Your Mans
+     </footer>
+
+  
     </div>
   );
 }
