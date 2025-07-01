@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Countdown() {
   const calculateTimeLeft = () => {
@@ -51,7 +51,7 @@ export default function Countdown() {
             I can&apos;t wait to hold you again on September 5th 💖
           </p>
           <img src="holding_hands3.jpeg" height={200} width={200} className="heart-clip" />
-          <Image
+          {/* <Image
 
             src="/holding_hands3.jpeg"
             alt="holding hands with my girl"
@@ -59,7 +59,7 @@ export default function Countdown() {
             width={200}
             className="heart-clip"
           
-          />
+          /> */}
         </CardContent>
       </Card>
     </div>
