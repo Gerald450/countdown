@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { formatDistanceToNowStrict } from "date-fns";
+import Image from "next/image";
 
 export default function Countdown() {
   const calculateTimeLeft = () => {
@@ -48,9 +48,18 @@ export default function Countdown() {
             {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
           </div>
           <p className="text-md sm:text-lg text-gray-600 italic">
-            I can't wait to hold you again on September 5th 💖
+            I can&apos;t wait to hold you again on September 5th 💖
           </p>
           <img src="holding_hands3.jpeg" height={200} width={200} className="heart-clip" />
+          <Image
+
+            src="/holding_hands3.jpeg"
+            alt="holding hands with my girl"
+            height={200}
+            width={200}
+            className="heart-clip"
+          
+          />
         </CardContent>
       </Card>
     </div>
