@@ -10,6 +10,7 @@ export default function Countdown() {
     const difference = targetDate.getTime() - now.getTime();
 
     let timeLeft = {
+      weeks: 0,
       days: 0,
       hours: 0,
       minutes: 0,
@@ -18,7 +19,8 @@ export default function Countdown() {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        weeks: Math.floor(difference / 604800000),
+        days: Math.floor((difference % 604800000) / 86400000),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
@@ -46,7 +48,7 @@ export default function Countdown() {
       <Card className="bg-white/80 shadow-xl backdrop-blur-md border-pink-200">
         <CardContent className="flex flex-col items-center p-10 text-center">
           <div className="text-2xl sm:text-4xl font-semibold text-rose-500 mb-4">
-            {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
+            {`${timeLeft.weeks}w ${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
           </div>
           <p className="text-md sm:text-lg text-gray-600 italic">
             I can&apos;t wait to hold you again on September 5th 💖
